@@ -7,6 +7,13 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "performanceCriteria": "Performance Criteria",
+        "performanceBaseScore": "Performance Base Score",
+        "businessDevelopmentTeam": "Business Development Team",
+        "teamMember": "Team Member",
+        "performanceScore": "Performance Score",
+        "sprint": "Sprint",
+        "sprintItem": "Sprint Item",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

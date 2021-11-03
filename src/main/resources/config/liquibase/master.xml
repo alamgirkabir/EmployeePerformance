@@ -15,7 +15,19 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043512_added_entity_PerformanceCriteria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043513_added_entity_PerformanceBaseScore.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043514_added_entity_BusinessDevelopmentTeam.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043515_added_entity_TeamMember.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043516_added_entity_PerformanceScore.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043517_added_entity_Sprint.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043518_added_entity_SprintItem.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20211103043513_added_entity_constraints_PerformanceBaseScore.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043515_added_entity_constraints_TeamMember.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043516_added_entity_constraints_PerformanceScore.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043517_added_entity_constraints_Sprint.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20211103043518_added_entity_constraints_SprintItem.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

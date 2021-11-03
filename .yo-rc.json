@@ -37,7 +37,15 @@
     "clientTheme": "none",
     "clientThemeVariant": "",
     "applicationIndex": 0,
-    "entities": [],
+    "entities": [
+      "PerformanceCriteria",
+      "PerformanceBaseScore",
+      "BusinessDevelopmentTeam",
+      "TeamMember",
+      "PerformanceScore",
+      "Sprint",
+      "SprintItem"
+    ],
     "skipCheckLengthOfIdentifier": false,
     "skipFakeData": false,
     "blueprints": [],
@@ -45,6 +53,7 @@
     "pages": [],
     "creationTimestamp": 1635913988404,
     "jwtSecretKey": "MDAwMTJiNjk4MzBiM2Y2MzliNGE4NmFmN2UzODRjOTM2YzhhOTY1NDkyMTIyOTlkNjI2ZDlmZjA2ZDJhNWZiOGIwYmRhMzZhYjNhNDRkNGU3MDcwODM3NTAwYWViZWNjMDRmNGFhMjQ5ZjdlNDg3YTU1MDE0NmE5ZTJlMGNkODk=",
-    "devServerPort": 4200
+    "devServerPort": 4200,
+    "lastLiquibaseTimestamp": 1635914118000
   }
 }
