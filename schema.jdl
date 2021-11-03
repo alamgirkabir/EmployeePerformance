@@ -1,0 +1,91 @@
+entity PerformanceCriteria {
+	skill String,
+    weight Float
+}
+
+entity PerformanceBaseScore {
+	score Float,
+    note TextBlob
+}
+
+enum Platform {
+	ANDROID
+    IOS
+    FLUTTER
+    QA
+    WEB
+    BACKEND
+}
+
+enum Business {
+	B2B
+    MX
+}
+entity BusinessDevelopmentTeam{
+    name String,
+	platform Platform,
+    business Business,
+    boardKey String
+}
+entity TeamMember {
+}
+entity PerformanceScore {
+	score Float
+}
+
+enum ReleaseStatus {
+	SUCCESS,
+    FAILED
+}
+
+entity Sprint {
+	name String,
+    startDate Instant,
+    endDate Instant,
+    releaseDate Instant,
+    releasedDate Instant,
+    status ReleaseStatus,
+    description String
+}
+
+enum IssueType {
+	TASK,
+	BUG,
+    QA_FEEDBACK,
+    DQA_FEEDBACK
+}
+entity SprintItem {
+	onTestDate Instant,
+    isMilestoneAchieved Boolean,
+    status ReleaseStatus,
+    storyPoint Float,
+    issueType IssueType,
+    hourEstimation Float,
+    hourLog Float,
+    issueId Integer,
+    issueName String,
+    takenInNoOfSprint Integer
+}
+entity User{
+
+}
+relationship OneToMany {
+	PerformanceCriteria to PerformanceBaseScore{skill(skill)}
+    BusinessDevelopmentTeam to TeamMember{team(name)}
+    
+    PerformanceCriteria to PerformanceScore{skill(skill)}
+    
+    BusinessDevelopmentTeam to Sprint{team(name)}
+    Sprint to SprintItem{sprint(name)}
+    Sprint to PerformanceScore{sprint(name)}
+}
+relationship ManyToOne {
+	TeamMember{user(login)} to User
+    PerformanceScore{feedbackUser(login)}  to User
+    SprintItem{assignee(login)} to User
+    PerformanceBaseScore{user(login)} to User
+    PerformanceScore{user(login)} to User
+}
+
+paginate PerformanceCriteria, BusinessDevelopmentTeam with infinite-scroll
+paginate Sprint, SprintItem, TeamMember, PerformanceScore  with pagination
